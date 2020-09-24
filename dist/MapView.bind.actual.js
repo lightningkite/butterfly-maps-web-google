@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const DisposeCondition_actual_1 = require("khrysalis/dist/rx/DisposeCondition.actual");
-const ObservableProperty_ext_shared_1 = require("khrysalis/dist/observables/ObservableProperty.ext.shared");
+const DisposeCondition_actual_1 = require("butterfly/dist/rx/DisposeCondition.actual");
+const ObservableProperty_ext_shared_1 = require("butterfly/dist/observables/ObservableProperty.ext.shared");
 const LatLng_ext_1 = require("./LatLng.ext");
 const mapSymbol = Symbol("mapSymbol");
 let floatingMapDivs = [];
@@ -30,7 +30,7 @@ function retireMap(element) {
     floatingMapDivs.push(element);
 }
 exports.retireMap = retireMap;
-//! Declares com.lightningkite.khrysalis.maps.bind>com.google.android.gms.maps.MapView
+//! Declares com.lightningkite.butterfly.maps.bind>com.google.android.gms.maps.MapView
 function xMapViewBind(this_, dependency, style) {
     const map = aquireMap();
     map.map.setOptions({
@@ -45,7 +45,7 @@ function xMapViewBind(this_, dependency, style) {
     }));
 }
 exports.xMapViewBind = xMapViewBind;
-//! Declares com.lightningkite.khrysalis.maps.bindView>com.google.android.gms.maps.MapView
+//! Declares com.lightningkite.butterfly.maps.bindView>com.google.android.gms.maps.MapView
 function xMapViewBindView(this_, dependency, position, zoomLevel = 15, animate = true, style = null) {
     xMapViewBind(this_, dependency, style);
     const map = this_[mapSymbol].map;
@@ -82,7 +82,7 @@ function xMapViewBindView(this_, dependency, position, zoomLevel = 15, animate =
     }), DisposeCondition_actual_1.xViewRemovedGet(this_));
 }
 exports.xMapViewBindView = xMapViewBindView;
-//! Declares com.lightningkite.khrysalis.maps.bindSelect>com.google.android.gms.maps.MapView
+//! Declares com.lightningkite.butterfly.maps.bindSelect>com.google.android.gms.maps.MapView
 function xMapViewBindSelect(this_, dependency, position, zoomLevel = 15, animate = true, style = null) {
     xMapViewBind(this_, dependency, style);
     const map = this_[mapSymbol].map;
@@ -109,7 +109,7 @@ function xMapViewBindSelect(this_, dependency, position, zoomLevel = 15, animate
                 marker.addListener("dragend", () => {
                     const pos = marker === null || marker === void 0 ? void 0 : marker.getPosition();
                     if (pos) {
-                        position.value = LatLng_ext_1.xLatLngToKhrysalis(pos);
+                        position.value = LatLng_ext_1.xLatLngToButterfly(pos);
                     }
                 });
             }
@@ -125,7 +125,7 @@ function xMapViewBindSelect(this_, dependency, position, zoomLevel = 15, animate
         }
     }), DisposeCondition_actual_1.xViewRemovedGet(this_));
     map.addListener("click", (ev) => {
-        position.value = LatLng_ext_1.xLatLngToKhrysalis(ev.latLng);
+        position.value = LatLng_ext_1.xLatLngToButterfly(ev.latLng);
     });
 }
 exports.xMapViewBindSelect = xMapViewBindSelect;

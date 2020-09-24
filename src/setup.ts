@@ -1,13 +1,13 @@
-import {GeoCoordinate} from "khrysalis/dist/location/GeoCoordinate.shared"
-import {GeoAddress} from "khrysalis/dist/location/GeoAddress.shared"
-import {setGeocodingMethod} from "khrysalis/dist/location/Geocoding.actual"
+import {GeoCoordinate} from "butterfly/dist/location/GeoCoordinate.shared"
+import {GeoAddress} from "butterfly/dist/location/GeoAddress.shared"
+import {setGeocodingMethod} from "butterfly/dist/location/Geocoding.actual"
 import {bindCallback, from, Observable, of} from "rxjs";
-import { HttpClient} from "khrysalis/dist/net/HttpClient.actual"
+import { HttpClient} from "butterfly/dist/net/HttpClient.actual"
 import {flatMap, map} from "rxjs/operators";
-import { xStringSubstringBefore } from "khrysalis/dist/kotlin/kotlin.text"
+import { xStringSubstringBefore } from "butterfly/dist/kotlin/kotlin.text"
 import {} from "googlemaps";
 import {
-    xLatLngToKhrysalis,
+    xLatLngToButterfly,
     xGeoCoordinateToMaps
 } from "./LatLng.ext";
 
@@ -32,7 +32,7 @@ export function setupGoogleMaps(){
         return bound(args).pipe(map((a)=>{
             return a[0].map((x)=>{
                 return new GeoAddress(
-                    xLatLngToKhrysalis(x.geometry.bounds.getCenter()),
+                    xLatLngToButterfly(x.geometry.bounds.getCenter()),
                     null,
                     x.address_components.find((x)=> x.types.indexOf("street_address") != -1 )?.short_name,
                     x.address_components.find((x)=> x.types.indexOf("sublocality") != -1 )?.short_name,

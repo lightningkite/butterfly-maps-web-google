@@ -1,6 +1,6 @@
-import { MutableObservableProperty } from 'khrysalis/dist/observables/MutableObservableProperty.shared';
-import { GeoCoordinate } from 'khrysalis/dist/location/GeoCoordinate.shared';
-import { ObservableProperty } from 'khrysalis/dist/observables/ObservableProperty.shared';
+import { MutableObservableProperty } from 'butterfly/dist/observables/MutableObservableProperty.shared';
+import { GeoCoordinate } from 'butterfly/dist/location/GeoCoordinate.shared';
+import { ObservableProperty } from 'butterfly/dist/observables/ObservableProperty.shared';
 declare const mapSymbol: unique symbol;
 declare global {
     interface HTMLDivElement {
