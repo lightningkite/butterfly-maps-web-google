@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const GeoCoordinate_shared_1 = require("butterfly/dist/location/GeoCoordinate.shared");
+const GeoCoordinate_1 = require("butterfly/dist/location/GeoCoordinate");
 //! Declares com.lightningkite.butterfly.maps.toButterfly
 function xLatLngToButterfly(this_) {
-    return new GeoCoordinate_shared_1.GeoCoordinate(this_.lat(), this_.lng());
+    return new GeoCoordinate_1.GeoCoordinate(this_.lat(), this_.lng());
 }
 exports.xLatLngToButterfly = xLatLngToButterfly;
 //! Declares com.lightningkite.butterfly.maps.toMaps

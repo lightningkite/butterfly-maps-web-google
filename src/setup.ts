@@ -1,8 +1,8 @@
-import {GeoCoordinate} from "butterfly/dist/location/GeoCoordinate.shared"
-import {GeoAddress} from "butterfly/dist/location/GeoAddress.shared"
-import {setGeocodingMethod} from "butterfly/dist/location/Geocoding.actual"
+import {GeoCoordinate} from "butterfly/dist/location/GeoCoordinate"
+import {GeoAddress} from "butterfly/dist/location/GeoAddress"
+import {setGeocodingMethod} from "butterfly/dist/location/Geocoding"
 import {bindCallback, from, Observable, of} from "rxjs";
-import { HttpClient} from "butterfly/dist/net/HttpClient.actual"
+import { HttpClient} from "butterfly/dist/net/HttpClient"
 import {flatMap, map} from "rxjs/operators";
 import { xStringSubstringBefore } from "butterfly/dist/kotlin/kotlin.text"
 import {} from "googlemaps";

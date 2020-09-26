@@ -8,14 +8,14 @@
   template:
     pattern: getMapAsync(~this~, ~0~)
     imports:
-      getMapAsync: butterfly-maps/dist/MapView.bind.actual
+      getMapAsync: butterfly-maps/dist/MapView.bind
 
 - id: com.google.android.gms.maps.MapView.getMapAsync
   type: call
   template:
     pattern: getMapAsync(~this~, ~0~)
     imports:
-      getMapAsync: butterfly-maps/dist/MapView.bind.actual
+      getMapAsync: butterfly-maps/dist/MapView.bind
 
 - id: com.google.android.gms.maps.GoogleMap
   type: type
