@@ -5,6 +5,8 @@
   "main": "Kotlin.js",
   "types": "Kotlin.d.ts",
   "dependencies": {
+  },
+  "peerDependencies": {
     "butterfly": "file:../butterfly-web",
     "rxjs": "^6.5.5",
     "sprintf-js": "^1.1.2",
@@ -15,9 +17,6 @@
     "@types/uuid": "^8.0.0",
     "iterable-operator": "^0.10.3",
     "@types/googlemaps": "^3.39.11"
-  },
-  "peerDependencies": {
-    "khrysalis": "file:../web"
   },
   "devDependencies": {
     "typescript": "^3.4.5"
