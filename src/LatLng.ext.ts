@@ -1,5 +1,5 @@
 
-import {GeoCoordinate} from "butterfly/dist/location/GeoCoordinate";
+import {GeoCoordinate} from "butterfly-web/dist/location/GeoCoordinate";
 import {} from "googlemaps"
 
 //! Declares com.lightningkite.butterfly.maps.toButterfly

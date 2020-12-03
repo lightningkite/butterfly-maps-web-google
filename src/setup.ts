@@ -1,10 +1,10 @@
-import {GeoCoordinate} from "butterfly/dist/location/GeoCoordinate"
-import {GeoAddress} from "butterfly/dist/location/GeoAddress"
-import {setGeocodingMethod} from "butterfly/dist/location/Geocoding"
+import {GeoCoordinate} from "butterfly-web/dist/location/GeoCoordinate"
+import {GeoAddress} from "butterfly-web/dist/location/GeoAddress"
+import {setGeocodingMethod} from "butterfly-web/dist/location/Geocoding"
 import {bindCallback, from, Observable, of} from "rxjs";
-import { HttpClient} from "butterfly/dist/net/HttpClient"
+import { HttpClient} from "butterfly-web/dist/net/HttpClient"
 import {flatMap, map} from "rxjs/operators";
-import { xStringSubstringBefore } from "butterfly/dist/kotlin/kotlin.text"
+import { xStringSubstringBefore } from "butterfly-web/dist/kotlin/kotlin.text"
 import {} from "googlemaps";
 import {
     xLatLngToButterfly,
