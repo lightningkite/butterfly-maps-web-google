@@ -1,7 +1,7 @@
 {
   "name": "butterfly-maps-web-google",
   "version": "0.1.0",
-  "description": "",
+  "description": "Shared code for maps using Butterfly. This is the web portion.",
   "main": "Kotlin.js",
   "types": "Kotlin.d.ts",
   "dependencies": {},
