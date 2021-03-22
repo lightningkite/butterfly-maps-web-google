@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.xMapViewBindSelect = exports.xMapViewBindView = exports.xMapViewBind = exports.retireMap = exports.acquireMap = exports.aquireMap = void 0;
 const DisposeCondition_ext_1 = require("butterfly-web/dist/rx/DisposeCondition.ext");
 const DisposableLambda_1 = require("butterfly-web/dist/rx/DisposableLambda");
 const ObservableProperty_ext_1 = require("butterfly-web/dist/observables/ObservableProperty.ext");

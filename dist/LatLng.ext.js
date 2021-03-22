@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.xGeoCoordinateToMaps = exports.xLatLngToButterfly = void 0;
 const GeoCoordinate_1 = require("butterfly-web/dist/location/GeoCoordinate");
 //! Declares com.lightningkite.butterfly.maps.toButterfly
 function xLatLngToButterfly(this_) {
